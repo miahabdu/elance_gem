@@ -35,7 +35,6 @@ module Elance
       c.http_post(Curl::PostField.content('code', URI.escape(auth_code)),
                         Curl::PostField.content('grant_type', 'authorization_code'))
       res = c.perform
-      ap res
       res
     end
 
